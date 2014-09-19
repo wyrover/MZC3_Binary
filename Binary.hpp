@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////
-// Binary.h -- 
+// Binary.hpp -- 
 // This file is part of MZC3.  See file "ReadMe.txt" and "License.txt".
 ////////////////////////////////////////////////////////////////////////////
 
@@ -8,7 +8,7 @@
 
 ////////////////////////////////////////////////////////////////////////////
 
-class MBinary : std::vector<unsigned char>
+class MBinary : public std::vector<unsigned char>
 {
 public:
     static const size_type npos = static_cast<size_type>(-1);
@@ -187,7 +187,7 @@ namespace std
 #ifndef MZC_NO_INLINING
     #undef MZC_INLINE
     #define MZC_INLINE inline
-    #include "Binary_inl.h"
+    #include "Binary_inl.hpp"
 #endif
 
 ////////////////////////////////////////////////////////////////////////////
